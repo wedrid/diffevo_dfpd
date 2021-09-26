@@ -9,8 +9,6 @@ import pickle
 import time
 import tqdm
 
-#TODO check correcteness of should_exit and embedd within the code.
-
 results_dictionary = []
 
 il_dataset = "servo"
@@ -114,7 +112,7 @@ def differential_evolution(F = 1, CR = 1, P = 50, n = None, bound = 100, numero_
             for j in range(0, n):
                 if j != i_:
                     if random.uniform(0,1) < CR: 
-                        trial[j] = population[j][i] # TODO check correctness
+                        trial[j] = population[j][i] 
             
             trial_fvalue, _ = local_search2(x0 = trial, exact=exact)
             if trial_fvalue < population_fvalues[i]:
@@ -206,7 +204,7 @@ def differential_evolution2(F = 0.5, CR = 1, P = 50, n = None, bound = 100, nume
             for j in range(0, n):
                 if j != i_:
                     if random.uniform(0,1) < CR: 
-                        trial[j] = population[j][i] # TODO check correctness
+                        trial[j] = population[j][i] 
             
             trial_fvalue, trial_argmin = local_search2(x0 = trial, exact=exact)
             if trial_fvalue < population_fvalues[i]:
