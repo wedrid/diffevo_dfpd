@@ -11,10 +11,8 @@ import tqdm
 
 results_dictionary = []
 
-il_dataset = "servo"
-#alcune inits
-#numVar = 12
-#–constraint = 6
+il_dataset = "housing"
+
 filename = f"{il_dataset}_datasaver-"+str(datetime.now())[0:16].replace(':','-').replace(' ', 'at')+"_Randomized.pickle"
 local_searches_counter = 0
 stuck_counter = 0
